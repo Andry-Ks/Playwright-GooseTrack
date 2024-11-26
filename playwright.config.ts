@@ -3,6 +3,8 @@ import { defineConfig, devices } from '@playwright/test';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
+export const validEmail = process.env.PLAYWRIGHT_VALID_EMAIL;
+export const validPassword = process.env.PLAYWRIGHT_VALID_PASSWORD;
 
 /**
  * Read environment variables from file.
@@ -85,6 +87,3 @@ export default defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 });
-
-export const validEmail = process.env.PLAYWRIGHT_VALID_EMAIL;
-export const validPassword = process.env.PLAYWRIGHT_VALID_PASSWORD;
