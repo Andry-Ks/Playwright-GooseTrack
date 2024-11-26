@@ -1,10 +1,9 @@
 import { test, expect, request } from '@playwright/test';
 import { validEmail, validPassword } from '../../playwright.config';
 
-const backendURL = test.info().config.metadata.backendURL;
-
 test.describe('Positive login test', () => {
   test('Login', async ({ request }) => {
+    const backendURL = test.info().config.metadata.backendURL;
     const response = await request.post(`${backendURL}/user/login`, {
       data: {
         email: validEmail,
