@@ -1,5 +1,9 @@
 import { defineConfig, devices } from '@playwright/test';
 
+import * as dotenv from 'dotenv';
+dotenv.config();
+
+
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -81,3 +85,6 @@ export default defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 });
+
+export const validEmail = process.env.PLAYWRIGHT_VALID_EMAIL;
+export const validPassword = process.env.PLAYWRIGHT_VALID_PASSWORD;
