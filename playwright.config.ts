@@ -32,6 +32,10 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
 
+  metadata: {
+    backendURL: 'https://goose-tracker-backend.p.goit.global',
+  },
+
   /* Configure projects for major browsers */
   projects: [
     {
