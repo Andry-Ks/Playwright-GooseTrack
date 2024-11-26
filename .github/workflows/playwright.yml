@@ -21,4 +21,4 @@ jobs:
         env:
           PLAYWRIGHT_VALID_EMAIL: ${{ secrets.PLAYWRIGHT_VALID_EMAIL }}
           PLAYWRIGHT_VALID_PASSWORD: ${{ secrets.PLAYWRIGHT_VALID_PASSWORD }}
-        run: npx playwright test --debug
+        run: npx playwright test
