@@ -18,4 +18,4 @@ jobs:
         env:
           PLAYWRIGHT_VALID_EMAIL: ${{ secrets.PLAYWRIGHT_VALID_EMAIL }}
           PLAYWRIGHT_VALID_PASSWORD: ${{ secrets.PLAYWRIGHT_VALID_PASSWORD }}
-        run: xvfb-run -a npx playwright test --ui
+        run: npx playwright test
