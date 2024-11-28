@@ -14,6 +14,6 @@ test.describe('Positive login test', () => {
     await page.fill('input[name="password"]', validPassword);
     await expect(page.locator('button[type="submit"]')).toBeVisible();
     await page.click('button[type="submit"]');
-    await page.waitForNavigation();
+    await page.waitForURL('**/calendar/month/*');
   });
 });
