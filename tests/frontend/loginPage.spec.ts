@@ -10,14 +10,10 @@ test.describe('Positive login test', () => {
 
     await page.goto(baseURL!);
     await page.click('a[href="/login"]');
-    await expect(page.locator('button[type="submit"]')).toBeVisible();
     await page.fill('input[name="email"]', validEmail);
     await page.fill('input[name="password"]', validPassword);
+    await expect(page.locator('button[type="submit"]')).toBeVisible();
     await page.click('button[type="submit"]');
-  });
-
-  test.afterEach(async ({ page }) => {
-    await page.click('text=Log out');
-    
+    await page.waitForNavigation();
   });
 });
