@@ -23,6 +23,7 @@ test.describe('User logout test', () => {
     const logoutResponse = await request.get(`${backendURL}/user/logout`, {
       headers: {
         Authorization: `Bearer ${accessToken}`,
+        'Content-Type': 'application/json',
       },
     });
 
@@ -34,6 +35,7 @@ test.describe('User logout test', () => {
     const logoutResponse = await request.get(`${backendURL}/user/logout`, {
       headers: {
         Authorization: `Bearer ${accessToken}`,
+        'Content-Type': 'application/json',
       },
     });
 
