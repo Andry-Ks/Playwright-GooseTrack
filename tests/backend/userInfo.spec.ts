@@ -30,4 +30,14 @@ test.describe('Get user info tests', () => {
         console.log('User info:', responseBody);
     });
 
+    test('Get info with invalid token', async ({ request }) => {
+        const backendURL = test.info().config.metadata.backendURL;
+        const response = await request.get(`${backendURL}/user/info`, {
+            headers: {
+                Authorization: 'Bearerinvalid_token', 
+            },
+        });
+        expect(response.status()).toBe(401); //Unauthorized
+    });
+
 });
